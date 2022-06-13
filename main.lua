@@ -22,6 +22,7 @@ function love.load()
       vector:super(x, y)
       self.z = z
    end
+
    function vectorz:print()
       print(self.x..", "..self.y..", "..self.z)
    end
@@ -35,7 +36,6 @@ function love.load()
 end
 
 function love.update()
-
 
 
 end
