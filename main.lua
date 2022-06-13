@@ -14,21 +14,23 @@ function love.load()
       print(self.x..", "..self.y)
    end
 
-   vectorZ = class(vector)
-   function vectorZ:init(x, y, z)
-      self.x = x
-      self.y = y
-      self.z = z
-   end
-   function vectorZ:print()
-      print(self.x..", "..self.y..", "..self.z)
-   end
-
    point = vector:new(128, 64)
    point:print()
 
-   pointZ = vectorZ:new(32, 35, 21)
-   pointZ:print()
+   vectorz = class(vector)
+   function vectorz:init(x, y, z)
+      vector:super(x, y)
+      self.z = z
+   end
+   function vectorz:print()
+      print(self.x..", "..self.y..", "..self.z)
+   end
+
+   pointz = vectorz:new(13, 47, 56)
+   pointz:print()
+
+   pointz2 = vectorz:new(2354, 667, 875)
+   pointz2:print()
 
 end
 

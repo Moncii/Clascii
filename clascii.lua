@@ -9,15 +9,13 @@ clascii = function(extends)
    object.__index = object
 
    if(extends ~= nil) then
-      setmetatable(object, extends)
-      if(object.init ~= nil) then
-         object:init()
+      function extends:super(...)
+         self:init(...)
       end
+      setmetatable(object, extends)
    end
 
    function object:new(...)
-
-      -- TODO Inheritance
 
       instance = setmetatable({}, self)
 
